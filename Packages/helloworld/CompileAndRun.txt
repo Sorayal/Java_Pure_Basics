@@ -1,0 +1,5 @@
+Compile from current directory where the source files are:
+javac -cp . *.java
+
+Running from current directory:
+java -cp .;C:\WorkingSpace\TutorialFolder\PureJava\Java_Pure_Basics\Packages\ helloworld.HelloWorld
