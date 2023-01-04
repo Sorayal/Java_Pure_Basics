@@ -1,0 +1,10 @@
+That is necessary because the windows console produces this error:
+external_lib\commons-lang3-3.12.0\commons-lang3-3.12.0-sources.jar(/org/apache/commons/lang3/text/translate/EntityArrays.java):75: error: unmappable character (0x81) for encoding windows-1252
+        {"\u00C1", "&Aacute;"}, // ├? - uppercase A, acute accent
+
+
+Command to compile:
+javac -encoding UTF-8 -cp external_lib/commons-lang3-3.12.0/*; to_string/*.java
+
+Command to run:
+java -cp external_lib/commons-lang3-3.12.0/*; to_string/Main
