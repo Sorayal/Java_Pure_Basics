@@ -1,0 +1,67 @@
+ Short theory snippets about Java
+ 
+ Top level file:
+ That is a file which contains a public class or interface which is not nested. 
+ 
+ Example:
+ 
+ public class App {
+	// inner class
+	class App2 {
+		//some methods and fields
+	}
+ }
+ 
+ App would be here the top-level file with the extension App.java. You cannot have two public classes in the same source file. 
+ 
+ 
+ 
+ ---
+ 
+ Wiederholung Compilieren und laufen lassen
+ 
+ javac -cp . NumberPicker.java
+ Diese Anweisung weist den Compiler an, im aktuellen Verzeichnis das top-level file NumberPicker.java zu kompilieren. Dazu
+ wird noch der Classpath mit angegeben und zeigt dem Compiler so, wo sich die notwendige Datei findet.
+ 
+  
+ java -cp . NumberPicker.java
+ Diese Anweisung ist die Kurzform , die Kompilieren und Ablaufen lassen zusammenfasst und durchführt.
+ 
+ ---
+ 
+ Using wildcards * for import packages
+ 
+ Using a wildcard to import a package won´t slow down the program execution. Only actual used classes will be instantiated in case it´s necessary. 
+ These classes in a package are visible at the classpath. However it´s not a good practice to use wildcards. Instead it should be more specific what
+ other classes from other packages will be imported actually. This can help also to avoid conflicts which would cause a compiler error. For instance
+ the class Date can be found in the package java.util and in the package java.sql. Importing both with wildcard would cause a comiler error due to a
+ name conflict. One solution for using classes with same name would be to use the fully qualified name.
+ 
+ ---
+ 
+ What package is imported at any java programme by default and don´t need a import declaration?
+ The package java.lang with all classes in it like the root class Object.
+ 
+ ---
+ 
+ How is the order in a class file? Sort top-level type declaration, methods, fields, constructor, import and package into the right order.
+ ((Hint for Acronym "PIC" Package, Import, Class
+ 
+ 1. Package declaration
+ 2. Imports from other packages
+ 3. Top-level type declaration
+ 4. Fields
+ 5. Constructors (special methods)
+ 6. Methods
+ 
+ The last 3 points have not really an order within the class.
+ ---
+ 
+ What is the minimum class declaration in Java which is compileable?
+ 
+ class Main {}
+ 
+ ---
+ 
+ 
